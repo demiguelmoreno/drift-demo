@@ -26,6 +26,7 @@ resource "aws_instance" "web_server_instance" {
   tags = {
     yor_trace = "b44dfe3a-d183-466f-81e4-f7b0046f45a9"
   }
+  key_name = "linux-key-pair"
 }
 
 data "aws_ami" "ubuntu" {
