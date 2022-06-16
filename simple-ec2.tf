@@ -4,7 +4,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_security_group" "terraform-security-group" {
+resource "aws_security_group" "ssh_traffic" {
   name = "mdemiguelmor-ssh_traffic"
   ingress {
     from_port   = 22
