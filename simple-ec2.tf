@@ -27,6 +27,7 @@ resource "aws_instance" "web_server_instance" {
     yor_trace = "b44dfe3a-d183-466f-81e4-f7b0046f45a9"
   }
   key_name = "linux-key-pair"
+  ebs_optimized = true
 }
 
 data "aws_ami" "ubuntu" {
