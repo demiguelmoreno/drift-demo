@@ -26,7 +26,6 @@ resource "aws_instance" "web_server_instance" {
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
   key_name        = "linux-key-pair"
-  ebs_optimized   = true
 }
 
 data "aws_ami" "ubuntu" {
