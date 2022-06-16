@@ -7,7 +7,6 @@ provider "aws" {
 resource "aws_security_group" "ssh_traffic" {
   name = "mdemiguelmor-ssh_traffic"
   description = "Allow SSH inbound traffic"
-  
   ingress {
     from_port   = 22
     to_port     = 22
