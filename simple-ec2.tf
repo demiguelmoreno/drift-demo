@@ -24,7 +24,7 @@ resource "aws_security_group" "mdemiguelmor-SG" {
 resource "aws_instance" "mdemiguelmor-EC2" {
   ami = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
-  security_groups = ["${aws_security_group.mdemiguelmor-sg.name}"]
+  security_groups = ["${aws_security_group.mdemiguelmor-SG.name}"]
   key_name        = "linux-key-pair"
 }
 
