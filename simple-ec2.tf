@@ -4,7 +4,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_security_group" "ssh_traffic" {
+resource "aws_security_group" "mdemiguelmor-SG" {
   name = "mdemiguelmor-ssh_traffic"
   ingress {
     from_port   = 22
@@ -21,10 +21,10 @@ resource "aws_security_group" "ssh_traffic" {
   }
 }
 
-resource "aws_instance" "web_server_instance" {
+resource "aws_instance" "mdemiguelmor-EC2" {
   ami = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
-  security_groups = ["${aws_security_group.ssh_traffic.name}"]
+  security_groups = ["${aws_security_group.mdemiguelmor-sg.name}"]
   key_name        = "linux-key-pair"
 }
 
