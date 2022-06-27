@@ -30,6 +30,7 @@ resource "aws_instance" "mdemiguelmor-EC2" {
   security_groups = ["${aws_security_group.mdemiguelmor-SG.name}"]
   key_name        = "linux-key-pair"
   tags = {
+    Name      = "mdemiguelmor-ubuntu-001"
     yor_trace = "1bc48160-da4d-4af7-b73d-2f6b1ac39f79"
   }
 }
